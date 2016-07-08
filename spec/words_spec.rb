@@ -49,7 +49,7 @@ end
       test_word.save()
       test_word2 = Word.new('goodbye')
       test_word2.save()
-      expect(Word.find(test_word.id())).to(eq(test_word))
+      expect(Word.find(test_word2.id())).to(eq(test_word2))
     end
   end
 
