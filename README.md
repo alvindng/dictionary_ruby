@@ -12,7 +12,7 @@ Website showcasing everything I learned in week 2 Ruby of Epicodus. This applica
 ## Setup/Installation Requirements
 
 * Download/clone repository, or visit
-https://degrassi-syrup-35998.herokuapp.com/
+https://aqueous-harbor-67820.herokuapp.com/
 * To add a word, click the "Add a New Word" Link
 * Fill out the form to add a new word
 * Click on the word to see its definitions
