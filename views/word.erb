@@ -1,5 +1,11 @@
 <h1><%=@word.name()%></h1>
-
+  <% if @word.definitions() != [] %>
+    <ul>
+    <% @word.definitions().each do |definition| %>
+      <li><%= definition.definition() %></li>
+    <% end %>
+  </ul>
+<% end %>
 <h3>Definitions</h3>
 
 
