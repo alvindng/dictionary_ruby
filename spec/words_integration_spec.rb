@@ -33,5 +33,13 @@ describe('the user path', {:type => :feature}) do
     expect(page).to have_content("test")
   end
 
-
+  it('allows the user create a definition for a word') do
+    visit('/')
+    click_link("Add a New Word")
+    fill_in('word', :with => "yoohoo")
+    click_button("Add Word")
+    click_link("yoohoo")
+    click_link("Add a New Definition")
+    expect(page).to have_content("Enter your definition")
+  end
 end
