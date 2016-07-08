@@ -3,8 +3,9 @@
 <h3>Here are all the words:</h3>
 <ul>
 <% @words.each() do |word| %>
-  <li><a href="/words/<%= word.id()%>"><%word.name()%></a></li>
+  <li><a href="/words/<%= word.id()%>"><%=word.name()%></a></li>
 <% end%>
 </ul>
 
 <a href="/">Go Home</a>
+<a href="/words/new">Add a New Word</a>
