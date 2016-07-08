@@ -3,6 +3,7 @@ class Definition
 
   define_method(:initialize) do |definition|
     @definition = definition
+    @id = @@definitions.length().+(1)
   end
 
   define_method(:definition) do
@@ -20,4 +21,20 @@ class Definition
   define_singleton_method(:clear) do
     @@definitions = []
   end
+
+  define_method(:id) do
+  @id
+  end
+
+  # define_singleton_method(:find) do |id|
+  #   found_definition = nil
+  #   @@definitions.each() do |definition|
+  #     if
+  #       definition.id().eql?(id.to_i())
+  #       found_definition = definition
+  #     end
+  #   end
+  #   found_definition
+  # end
+
 end
