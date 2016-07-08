@@ -17,10 +17,21 @@ describe('the user path', {:type => :feature}) do
   end
 
   it('allows user to add a new word after completing form') do
-  visit('/')
-  click_link("Add a New Word")
-  fill_in('word', :with => "hello")
-  click_button("Add Word")
-  expect(page).to have_content("hello")
+    visit('/')
+    click_link("Add a New Word")
+    fill_in('word', :with => "hello")
+    click_button("Add Word")
+    expect(page).to have_content("hello")
   end
+
+  it('allows the user to see the word they created and its definitions') do
+    visit('/')
+    click_link("Add a New Word")
+    fill_in('word', :with => "test")
+    click_button("Add Word")
+    click_link("test")
+    expect(page).to have_content("test")
+  end
+
+
 end
