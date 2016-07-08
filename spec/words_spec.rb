@@ -2,9 +2,9 @@ require('rspec')
 require('words')
 
 describe('Word') do
-#   before() do
-#     Word.clear()
-# end
+  before() do
+    Word.clear()
+end
 
   describe('#name') do
     it('returns the name of the word') do
@@ -27,12 +27,20 @@ describe('Word') do
     end
   end
 
-  # describe('.clear') do
-  #   it('empties out all of the saved words') do
-  #     Word.new('hello')
-  #     Word.clear()
-  #     expect(Word.all()).to(eq([]))
-  #   end
-  # end
+  describe('.clear') do
+    it('empties out all of the saved words') do
+      Word.new('hello')
+      Word.clear()
+      expect(Word.all()).to(eq([]))
+    end
+  end
+
+  describe('#id') do
+    it('returns the id of the word') do
+      test_word = Word.new('hello')
+      test_word.save()
+      expect(test_word.id()).to(eq(1))
+    end
+  end
 
 end

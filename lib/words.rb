@@ -3,6 +3,7 @@ class Word
 
   define_method(:initialize) do |word|
     @name = word
+    @id = @@words.length.+(1)
   end
 
   define_method(:name) do
@@ -17,8 +18,8 @@ class Word
     @@words.push(self)
   end
 
-  # define_singleton_method(:clear) do
-  #   @@words = []
-  # end
+  define_singleton_method(:clear) do
+    @@words = []
+  end
 
 end
