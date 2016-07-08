@@ -16,4 +16,12 @@ describe('Definition') do
       expect(Definition.all()).to(eq([]))
     end
   end
+
+  describe(':save') do
+    it('saves the new definition into the array of definitions') do
+      test_definition = Definition.new('a greeting')
+      test_definition.save()
+      expect(Definition.all()).to(eq([test_definition]))
+    end
+  end
 end
