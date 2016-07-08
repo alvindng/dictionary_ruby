@@ -19,4 +19,20 @@ describe('Word') do
     end
   end
 
+  describe('#save') do
+    it('saves the newly added word into an array of words') do
+      test_word = Word.new('hello')
+      test_word.save()
+      expect(Word.all()).to(eq([test_word]))
+    end
+  end
+
+  # describe('.clear') do
+  #   it('empties out all of the saved words') do
+  #     Word.new('hello')
+  #     Word.clear()
+  #     expect(Word.all()).to(eq([]))
+  #   end
+  # end
+
 end
