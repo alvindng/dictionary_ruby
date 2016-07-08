@@ -4,7 +4,7 @@ require('launchy')
 Capybara.app = Sinatra::Application
 set(:show_exceptions, false)
 
-describe('the user path', {:type => :feature}) do
+describe('the word creation path', {:type => :feature}) do
   it('opens the home page') do
     visit('/')
     expect(page).to have_content("Welcome to Your Dictionary!")
@@ -23,7 +23,9 @@ describe('the user path', {:type => :feature}) do
     click_button("Add Word")
     expect(page).to have_content("hello")
   end
+end
 
+describe('the definition creation path', {:type => :feature}) do
   it('allows the user to see the word they created and its definitions') do
     visit('/')
     click_link("Add a New Word")
