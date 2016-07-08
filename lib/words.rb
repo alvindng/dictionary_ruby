@@ -1,4 +1,5 @@
 class Word
+@@words = []
 
   define_method(:initialize) do |word|
     @name = word
@@ -7,4 +8,9 @@ class Word
   define_method(:name) do
     @name
   end
+
+  define_singleton_method(:all) do
+    @@words = []
+  end
+
 end
