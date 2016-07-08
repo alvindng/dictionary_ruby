@@ -22,4 +22,7 @@ class Word
     @@words = []
   end
 
+  define_method(:id) do
+    @id
+  end
 end
