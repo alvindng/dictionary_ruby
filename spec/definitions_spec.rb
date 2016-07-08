@@ -42,14 +42,14 @@ describe('Definition') do
     expect(test_definition.id()).to(eq(1))
     end
   end
-  #
-  # describe('#find') do
-  #   it('returns a definition by its id number') do
-  #     test_definition = Definition.new("a greeting")
-  #     test_definition.save()
-  #     test_definition2 = Definition.new("a closing statement")
-  #     test_definition2.save()
-  #     expect(Word.find(test_definition2.id())).to(eq(2))
-  #   end
-  # end
+
+  describe('.find') do
+    it('returns a definition by its id number') do
+      test_definition = Definition.new("a greeting")
+      test_definition.save()
+      test_definition2 = Definition.new("a closing statement")
+      test_definition2.save()
+      expect(Definition.find(test_definition2.id())).to(eq(test_definition2))
+    end
+  end
 end
